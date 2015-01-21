@@ -23,6 +23,7 @@ and some will replace nodes (e.g. `disabled` will replace any existing disabled 
 **NOTE: when using these methods, remember that you need to use them in context. I.e. to use the `downstream` method,
 it needs to be enclosed in a `publishers` context.**
 
+        bitbucketPullRequest(Closure pullRequestClosure)    // since ...
 The plugin tries to provide DSL methods to cover "common use case" scenarios as simple method calls. When these methods
 fail you, you can always generate the underlying XML yourself via [[The Configure Block]]. Sometimes, a DSL
 method will provide a configure block of its own, which will set the a good context to help modify a few fields.
