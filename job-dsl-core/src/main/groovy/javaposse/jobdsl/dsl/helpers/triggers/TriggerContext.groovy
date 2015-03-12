@@ -293,6 +293,7 @@ class TriggerContext extends AbstractContext {
      *      <repositoryName></repositoryName>
      *      <ciSkipPhases></ciSkipPhases>
      *      <checkDestinationCommit>false</checkDestinationCommit>
+     *      <postBuildCommentFilePath></postBuildCommentFilePath>
      *  </bitbucketpullrequestbuilder.bitbucketpullrequestbuilder.BitbucketBuildTrigger>
      */
     void bitbucketPullRequest(@DslContext(BitbucketPullRequestBuilderContext) Closure contextClosure) {
@@ -309,6 +310,7 @@ class TriggerContext extends AbstractContext {
             repositoryName pullRequestBuilderContext.repositoryName
             ciSkipPhases pullRequestBuilderContext.ciSkipPhases
             checkDestinationCommit pullRequestBuilderContext.checkDestinationCommit
+            postBuildCommentFilePath pullRequestBuilderContext.postBuildCommentFilePath
         }
     }
 }

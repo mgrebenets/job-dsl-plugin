@@ -1550,6 +1550,7 @@ bitbucketPullRequest {
     repositoryName(String repositoryName)   // set Bitbucket repository name
     ciSkipPhases(String ciSkipPhases)   // set ci skip phases
     checkDestinationCommit(boolean checkDestinationCommit = false)  // rebuild if destination branch changes, defaults to false if not specified
+    postBuildCommentFilePath(String path)   // post a post-build comment message from specified file
 }
 ```
 
@@ -1578,6 +1579,7 @@ job {
             repositoryName('bitbucketRepositoryName')
             ciSkipPhases('.*\\[skip\\W+ci\\].*')
             checkDestinationCommit(true)
+            postBuildCommentFilePath("commit-msg.md")
         }
     }
 }

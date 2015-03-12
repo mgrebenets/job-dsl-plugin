@@ -647,6 +647,7 @@ class TriggerContextSpec extends Specification {
             repositoryName[0].value() == ''
             ciSkipPhases[0].value() == ''
             checkDestinationCommit[0].value() == false
+            postBuildCommentFilePath[0].value() == ''
         }
     }
 
@@ -660,6 +661,7 @@ class TriggerContextSpec extends Specification {
             repositoryName('bitbucketRepositoryName')
             ciSkipPhases('.*\\[skip\\W+ci\\].*')
             checkDestinationCommit(true)
+            postBuildCommentFilePath('comment-msg.md')
         }
 
         then:
@@ -674,6 +676,7 @@ class TriggerContextSpec extends Specification {
             repositoryName[0].value() == 'bitbucketRepositoryName'
             ciSkipPhases[0].value() == '.*\\[skip\\W+ci\\].*'
             checkDestinationCommit[0].value() == true
+            postBuildCommentFilePath[0].value() == 'comment-msg.md'
         }
     }
 }

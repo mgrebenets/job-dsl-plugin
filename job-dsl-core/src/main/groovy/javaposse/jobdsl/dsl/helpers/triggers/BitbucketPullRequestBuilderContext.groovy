@@ -11,6 +11,7 @@ class BitbucketPullRequestBuilderContext implements Context {
     String repositoryName = ''
     String ciSkipPhases = ''
     boolean checkDestinationCommit = false
+    String postBuildCommentFilePath = ''
 
     void cron(String cron) {
         this.cron = cron
@@ -38,5 +39,9 @@ class BitbucketPullRequestBuilderContext implements Context {
 
     void checkDestinationCommit(boolean checkDestinationCommit = false) {
         this.checkDestinationCommit = checkDestinationCommit
+    }
+
+    void postBuildCommentFilePath(String postBuildCommentFilePath) {
+        this.postBuildCommentFilePath = postBuildCommentFilePath
     }
 }
